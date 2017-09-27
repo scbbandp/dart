@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_HOME_FORM_LBL_HOME_PAGE_CREATED_BY" description="COM_HOME_FORM_DESC_HOME_PAGE_CREATED_BY" hidden="true" hint="COM_HOME_FORM_LBL_HOME_PAGE_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_HOME_FORM_LBL_HOME_PAGE_MODIFIED_BY" description="COM_HOME_FORM_DESC_HOME_PAGE_MODIFIED_BY" hidden="true" hint="COM_HOME_FORM_LBL_HOME_PAGE_MODIFIED_BY"/>
+    <field name="name" type="text" filter="safehtml" required="true" label="COM_HOME_FORM_LBL_HOME_PAGE_NAME" description="COM_HOME_FORM_DESC_HOME_PAGE_NAME" hint="COM_HOME_FORM_LBL_HOME_PAGE_NAME"/>
+    <field name="discover_title" type="text" filter="safehtml" label="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_TITLE" description="COM_HOME_FORM_DESC_HOME_PAGE_DISCOVER_TITLE" hint="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_TITLE"/>
+    <field name="discover_text" type="editor" editor="desired" filter="JComponentHelper::filterText" label="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_TEXT" description="COM_HOME_FORM_DESC_HOME_PAGE_DISCOVER_TEXT" hint="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_TEXT"/>
+    <field name="discover_main_title" type="text" filter="safehtml" label="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_MAIN_TITLE" description="COM_HOME_FORM_DESC_HOME_PAGE_DISCOVER_MAIN_TITLE" hint="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_MAIN_TITLE"/>
+    <field name="discover_main_image" type="media" directory="home" label="Discover Main Image" description="Discover Main Image" hint="Discover Main Image"/>
+    <field name="discover_main_link" type="text" label="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_MAIN_LINK" description="COM_HOME_FORM_DESC_HOME_PAGE_DISCOVER_MAIN_LINK" hint="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_MAIN_LINK"/>
+    <field name="discover_first_title" type="text" filter="safehtml" label="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_FIRST_TITLE" description="COM_HOME_FORM_DESC_HOME_PAGE_DISCOVER_FIRST_TITLE" hint="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_FIRST_TITLE"/>
+    <field name="discover_first_image" type="media" directory="" label="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_FIRST_IMAGE" description="COM_HOME_FORM_DESC_HOME_PAGE_DISCOVER_FIRST_IMAGE" hint="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_FIRST_IMAGE"/>
+    <field name="discover_first_mobile" type="media" directory="" label="Discover First Mobile" description="Discover First Mobile" hint="Discover First Mobile"/>
+    <field name="discover_first_link" type="text" label="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_FIRST_LINK" description="COM_HOME_FORM_DESC_HOME_PAGE_DISCOVER_FIRST_LINK" hint="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_FIRST_LINK"/>
+    <field name="discover_second_title" type="text" filter="safehtml" label="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_SECOND_TITLE" description="COM_HOME_FORM_DESC_HOME_PAGE_DISCOVER_SECOND_TITLE" hint="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_SECOND_TITLE"/>
+    <field name="discover_second_image" type="media" directory="" label="Discover Second Image" description="Discover Second Image" hint="Discover Second Image"/>
+    <field name="discover_second_mobile" type="media" directory="" label="Discover Second Mobile" description="Discover Second Mobile" hint="Discover Second Mobile"/>
+    <field name="discover_second_link" type="text" label="Discover Second Link" description="Discover Second Link" hint="Discover Second Link"/>
+    <field name="discover_third_title" type="text" filter="safehtml" label="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_THIRD_TITLE" description="COM_HOME_FORM_DESC_HOME_PAGE_DISCOVER_THIRD_TITLE" hint="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_THIRD_TITLE"/>
+    <field name="discover_third_mobile" type="media" directory="" label="Discover Third Mobile" description="Discover Third Mobile" hint="Discover Third Mobile"/>
+    <field name="discover_third_image" type="media" directory="" label="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_THIRD_IMAGE" description="COM_HOME_FORM_DESC_HOME_PAGE_DISCOVER_THIRD_IMAGE" hint="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_THIRD_IMAGE"/>
+    <field name="discover_third_link" type="text" label="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_THIRD_LINK" description="COM_HOME_FORM_DESC_HOME_PAGE_DISCOVER_THIRD_LINK" hint="COM_HOME_FORM_LBL_HOME_PAGE_DISCOVER_THIRD_LINK"/>
+    <field name="careers_title" type="text" filter="safehtml" label="COM_HOME_FORM_LBL_HOME_PAGE_CAREERS_TITLE" description="COM_HOME_FORM_DESC_HOME_PAGE_CAREERS_TITLE" hint="COM_HOME_FORM_LBL_HOME_PAGE_CAREERS_TITLE"/>
+    <field name="careers_text" type="textarea" filter="safehtml" label="COM_HOME_FORM_LBL_HOME_PAGE_CAREERS_TEXT" description="COM_HOME_FORM_DESC_HOME_PAGE_CAREERS_TEXT" hint="COM_HOME_FORM_LBL_HOME_PAGE_CAREERS_TEXT"/>
+    <field name="careers_text" type="textarea" filter="safehtml" label="COM_HOME_FORM_LBL_HOME_PAGE_CAREERS_TEXT" description="COM_HOME_FORM_DESC_HOME_PAGE_CAREERS_TEXT" hint="COM_HOME_FORM_LBL_HOME_PAGE_CAREERS_TEXT"/>
+    <field name="careers_image" type="media" directory="" label="Careers Image" description="Careers Image" hint="Careers Image"/>
+    
+	<field name="companies_title" type="text" filter="safehtml" label="COM_HOME_FORM_LBL_HOME_PAGE_COMPANIES_TITLE" description="COM_HOME_FORM_DESC_HOME_PAGE_COMPANIES_TITLE" hint="COM_HOME_FORM_LBL_HOME_PAGE_COMPANIES_TITLE"/>
+    <field name="companies_sub" type="text" filter="safehtml" label="Companies sub" description="Companies sub" hint="Companies sub"/>
+    <field name="companies_text" type="textarea" filter="safehtml" label="COM_HOME_FORM_LBL_HOME_PAGE_COMPANIES_TEXT" description="COM_HOME_FORM_DESC_HOME_PAGE_COMPANIES_TEXT" hint="COM_HOME_FORM_LBL_HOME_PAGE_COMPANIES_TEXT"/>
+    <field name="community_title" type="text" filter="safehtml" label="COM_HOME_FORM_LBL_HOME_PAGE_COMMUNITY_TITLE" description="COM_HOME_FORM_DESC_HOME_PAGE_COMMUNITY_TITLE" hint="COM_HOME_FORM_LBL_HOME_PAGE_COMMUNITY_TITLE"/>
+    <field name="community_text" type="textarea" filter="safehtml" label="COM_HOME_FORM_LBL_HOME_PAGE_COMMUNITY_TEXT" description="COM_HOME_FORM_DESC_HOME_PAGE_COMMUNITY_TEXT" hint="COM_HOME_FORM_LBL_HOME_PAGE_COMMUNITY_TEXT"/>
+    <field name="community_first_title" type="text" filter="safehtml" label="Community First Title" description="Community First Title" hint="Community First Title"/>
+    <field name="community_first_text" type="textarea" filter="safehtml" label="Community First Text" description="Community First Text" hint="Community First Text"/>
+    <field name="community_first_image" type="media" directory="" label="Community First Image" description="Community First Image" hint="Community First Image"/>
+    <field name="community_second_title" type="text" filter="safehtml" label="Community Second Title" description="Community Second Title" hint="Community First Title"/>
+    <field name="community_second_text" type="textarea" filter="safehtml" label="Community Second Text" description="Community Second Text" hint="Community First Text"/>
+    <field name="community_second_image" type="media" directory="" label="Community First Second" description="Community Second Image" hint="Community First Image"/>
+    
+	<field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+  <fieldset name="accesscontrol">
+    <field name="asset_id" type="hidden" filter="unset"/>
+    <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules" validate="rules" class="inputbox" component="com_home" section="home_page"/>
+  </fieldset>
+</form>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_PAGE_TITLE_LIST_VIEW_TPAGES" option="View">
+        <message>
+                        <![CDATA[COM_PAGE_TITLE_LIST_VIEW_TPAGES_DESC]]>
+        </message>
+	</layout>
+</metadata>

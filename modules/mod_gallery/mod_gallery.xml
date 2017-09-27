@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>Gallery module</name>
+    <author>Simon Cruise</author>
+    <creationDate>2017-07-12</creationDate>
+    <copyright>Copyright (C) 2012 Asikart.com</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>simon.cruise@bbandp.com</authorEmail>
+    <authorUrl>http://bbandp.com</authorUrl>
+    <version>1.0</version>
+    <description>Display an image gallery</description>
+    
+    <scriptfile>install.php</scriptfile>    
+    
+    <files>
+        <filename module="mod_gallery">mod_gallery.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_gallery.xml</filename>
+        <filename>helper.php</filename>
+        <filename>install.php</filename>
+    </files>
+    <!--
+    <config>
+        
+        <fields name="params">
+            
+            <fieldset name="basic">
+                
+            <field
+                name="item_id"
+                query="SELECT `id` FROM #_bagallery_galleries ORDER BY `id`"
+                type="sql"
+                key_field="id" 
+                value_field="id"
+                label="Gallery Id"
+                require="true"
+                description="Gallery Id">
+            </field>
+            </fieldset>
+            
+        </fields>
+        
+    </config>
+    -->
+    
+</extension>

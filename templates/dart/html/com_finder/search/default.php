@@ -1,0 +1,34 @@
+<?php
+/**
+ * @package     Joomla.Site
+ * @subpackage  com_finder
+ *
+ * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+defined('_JEXEC') or die;
+
+JHtml::_('behavior.core');
+JHtml::_('formbehavior.chosen');
+JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
+JHtml::_('stylesheet', 'com_finder/finder.css', array('version' => 'auto', 'relative' => true));
+?>
+
+<div class="content-block ">
+	<h2>Search Results for &quot;<?php echo htmlentities (urldecode($_GET['q']));?>&quot; </h2>
+
+<?php if ($this->params->get('show_search_form', 1)) : ?>
+	<!--<div id="search-form">
+		<?php echo $this->loadTemplate('form'); ?>
+	</div>-->
+<?php endif;
+
+// Load the search results layout if we are performing a search.
+if ($this->query->search === true) :
+?>
+	<div id="search-results">
+		<?php echo $this->loadTemplate('results'); ?>
+	</div>
+<?php endif; ?>
+</div>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>More module</name>
+    <author>Simon Cruise</author>
+    <version>1.0.0</version>
+    <description>For displaying more links</description>
+    <files>
+        <filename>mod_more.xml</filename>
+        <filename module="mod_more">mod_more.php</filename>
+        <filename>index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+   
+   <config>
+        
+        <fields name="params">
+            
+            <fieldset name="basic">
+                
+                <field name="title1" type="text" filter="safehtml" required="true" label="Link title 1" description="Link title 1" hint="Link title 1"/>
+				<field name="image1" type="media" label="Link image 1" description="Link image 1" hint="Link image 1"/>
+				<field name="link1" type="text" filter="safehtml" required="true" label="Link url 1" description="Link url 1" hint="Link url 1"/>
+				<field name="title2" type="text" filter="safehtml" required="true" label="Link title 2" description="Link title 2" hint="Link title 2"/>
+				<field name="image2" type="media" label="Link image 2" description="Link image 2" hint="Link image 2"/>
+				<field name="link2" type="text" filter="safehtml" required="true" label="Link url 2" description="Link url 2" hint="Link url 2"/>
+				
+            </fieldset>
+        </fields>
+    </config>
+</extension>

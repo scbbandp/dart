@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_PAGE_FORM_LBL_TPAGE_CREATED_BY" description="COM_PAGE_FORM_DESC_TPAGE_CREATED_BY" hidden="true" hint="COM_PAGE_FORM_LBL_TPAGE_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_PAGE_FORM_LBL_TPAGE_MODIFIED_BY" description="COM_PAGE_FORM_DESC_TPAGE_MODIFIED_BY" hidden="true" hint="COM_PAGE_FORM_LBL_TPAGE_MODIFIED_BY"/>
+    <field name="name" type="text" filter="safehtml" required="true" label="COM_PAGE_FORM_LBL_TPAGE_NAME" description="COM_PAGE_FORM_DESC_TPAGE_NAME" hint="COM_PAGE_FORM_LBL_TPAGE_NAME"/>
+    <field name="title" type="text" filter="safehtml" label="COM_PAGE_FORM_LBL_TPAGE_TITLE" description="COM_PAGE_FORM_DESC_TPAGE_TITLE" hint="COM_PAGE_FORM_LBL_TPAGE_TITLE"/>
+    <field name="intro" type="editor" editor="desired" filter="JComponentHelper::filterText" label="COM_PAGE_FORM_LBL_TPAGE_INTRO" description="COM_PAGE_FORM_DESC_TPAGE_INTRO" hint="COM_PAGE_FORM_LBL_TPAGE_INTRO"/>
+    <field name="intro_image" type="media" directory="" label="COM_PAGE_FORM_LBL_TPAGE_INTRO_IMAGE" description="COM_PAGE_FORM_DESC_TPAGE_INTRO_IMAGE" hint="COM_PAGE_FORM_LBL_TPAGE_INTRO_IMAGE"/>
+    <field name="module" type="text" filter="safehtml" label="Module" description="Module" hint="Module"/>
+    <field name="module_name" type="text" filter="safehtml" label="Module Name" description="Module Name" hint="Module Name"/>
+    
+	
+	<field name="content" type="textarea" filter="raw" label="COM_PAGE_FORM_LBL_TPAGE_CONTENT" description="COM_PAGE_FORM_DESC_TPAGE_CONTENT" hint="COM_PAGE_FORM_LBL_TPAGE_CONTENT"/>
+    <field name="meta_title" type="text" filter="safehtml" label="COM_PAGE_FORM_LBL_TPAGE_META_TITLE" description="COM_PAGE_FORM_DESC_TPAGE_META_TITLE" hint="COM_PAGE_FORM_LBL_TPAGE_META_TITLE"/>
+    <field name="meta_desc" type="text" filter="safehtml" label="COM_PAGE_FORM_LBL_TPAGE_META_DESC" description="COM_PAGE_FORM_DESC_TPAGE_META_DESC" hint="COM_PAGE_FORM_LBL_TPAGE_META_DESC"/>
+    <field name="meta_key" type="textarea" filter="safehtml" label="COM_PAGE_FORM_LBL_TPAGE_META_KEY" description="COM_PAGE_FORM_DESC_TPAGE_META_KEY" hint="COM_PAGE_FORM_LBL_TPAGE_META_KEY"/>
+    <field name="alias" type="text" class="inputbox" generator="name" label="COM_PAGE_FORM_LBL_TPAGE_ALIAS" description="COM_PAGE_FORM_DESC_TPAGE_ALIAS" hint="COM_PAGE_FORM_LBL_TPAGE_ALIAS"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+  <fieldset name="accesscontrol">
+    <field name="asset_id" type="hidden" filter="unset"/>
+    <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules" validate="rules" class="inputbox" component="com_page" section="tpage"/>
+  </fieldset>
+</form>

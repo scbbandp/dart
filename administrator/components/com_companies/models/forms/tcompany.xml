@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="featured" type="radio"
+			class="btn-group btn-group-yesno"
+			label="JFEATURED"
+			description="COM_CONTENT_FIELD_FEATURED_DESC"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_COMPANIES_FORM_LBL_TCOMPANY_CREATED_BY" description="COM_COMPANIES_FORM_DESC_TCOMPANY_CREATED_BY" hidden="true" hint="COM_COMPANIES_FORM_LBL_TCOMPANY_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_COMPANIES_FORM_LBL_TCOMPANY_MODIFIED_BY" description="COM_COMPANIES_FORM_DESC_TCOMPANY_MODIFIED_BY" hidden="true" hint="COM_COMPANIES_FORM_LBL_TCOMPANY_MODIFIED_BY"/>
+    <field name="name" type="text" filter="safehtml" required="true" label="COM_COMPANIES_FORM_LBL_TCOMPANY_NAME" description="COM_COMPANIES_FORM_DESC_TCOMPANY_NAME" hint="COM_COMPANIES_FORM_LBL_TCOMPANY_NAME"/>
+    <field name="description" type="editor" editor="|" filter="JComponentHelper::filterText" label="COM_COMPANIES_FORM_LBL_TCOMPANY_DESCRIPTION" description="COM_COMPANIES_FORM_DESC_TCOMPANY_DESCRIPTION" hint="COM_COMPANIES_FORM_LBL_TCOMPANY_DESCRIPTION"/>
+    <field name="logo" type="media" directory="companies" label="COM_COMPANIES_FORM_LBL_TCOMPANY_LOGO" description="COM_COMPANIES_FORM_DESC_TCOMPANY_LOGO" hint="COM_COMPANIES_FORM_LBL_TCOMPANY_LOGO"/>
+     <field name="module_logo" type="media" directory="companies" label="Module logo" description="Module logo" hint="Module logo"/>
+   <field name="category" type="category" extension="com_companies" label="COM_COMPANIES_FORM_LBL_TCOMPANY_CATEGORY" description="COM_COMPANIES_FORM_DESC_TCOMPANY_CATEGORY" hint="COM_COMPANIES_FORM_LBL_TCOMPANY_CATEGORY"/>
+    <field name="link" type="text" label="COM_COMPANIES_FORM_LBL_TCOMPANY_LINK" description="COM_COMPANIES_FORM_DESC_TCOMPANY_LINK" hint="COM_COMPANIES_FORM_LBL_TCOMPANY_LINK"/>
+    <field name="address" type="textarea" filter="safehtml" label="COM_COMPANIES_FORM_LBL_TCOMPANY_ADDRESS" description="COM_COMPANIES_FORM_DESC_TCOMPANY_ADDRESS" hint="COM_COMPANIES_FORM_LBL_TCOMPANY_ADDRESS"/>
+    <field name="alias" type="text" class="inputbox" generator="name" label="COM_COMPANIES_FORM_LBL_TCOMPANY_ALIAS" description="COM_COMPANIES_FORM_DESC_TCOMPANY_ALIAS" hint="COM_COMPANIES_FORM_LBL_TCOMPANY_ALIAS"/>
+    <field name="tel" type="text" filter="safehtml" label="COM_COMPANIES_FORM_LBL_TCOMPANY_TEL" description="COM_COMPANIES_FORM_DESC_TCOMPANY_TEL" hint="COM_COMPANIES_FORM_LBL_TCOMPANY_TEL"/>
+    <field name="hours" type="textarea" filter="safehtml" label="COM_COMPANIES_FORM_LBL_TCOMPANY_HOURS" description="COM_COMPANIES_FORM_DESC_TCOMPANY_HOURS" hint="COM_COMPANIES_FORM_LBL_TCOMPANY_HOURS"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

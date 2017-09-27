@@ -1,0 +1,419 @@
+/*
+ * jQuery FlexSlider v2.6.2
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 and later license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ *
+ */
+nt-style: normal;
+}
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+.flex-container a:hover,
+.flex-slider a:hover {
+  outline: none;
+}
+.slides,
+.slides > li,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none !important;
+}
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+  position: relative;
+}
+
+.flexslider .slides > li {
+	position: relative;
+	max-width: 100%;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+}
+
+.flexslider .slides > li:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10px;
+    -webkit-box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.6);
+    -moz-box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.6);
+    box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.6);
+}
+
+.flexslider .slides > li a{
+	position: relative;
+}
+
+.flexslider .slides img {
+  width: 100%;
+  display: block; 
+}
+
+.flexslider .slides > li div.slide-copy {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  padding: 25px 30px;
+  background-color: rgba(0, 83, 156, .8);
+  max-width: 460px;
+  transition: background-color 0.5s ease;
+}
+
+.flexslider .slides > li:hover div.slide-copy {
+  background-color: rgba(0, 83, 156, 1);
+}
+
+.flexslider .slides > li div.slide-copy h2{
+	font-size: 24px !important;
+	line-height: 32px !important;
+	color: #fff;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+}
+
+.flexslider .slides > li div.slide-copy p{
+	font-size: 16px;
+	line-height: 22px;
+	color: #fff;
+	padding:  0 !important;
+	padding-right:  70px !important;
+}
+
+.flexslider .slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .flexslider .slides {
+  display: block;
+  background-color: #caccce;
+}
+
+html[xmlns] .flexslider .slides.featured-people {
+  background-color: transparent;
+}
+
+* html .flexslider .slides {
+  height: 1%;
+}
+.no-js .flexslider .slides > li:first-child {
+  display: block;
+}
+/* ====================================================================================================================
+ * DEFAULT THEME
+ * ====================================================================================================================*/
+.flexslider {
+  position: relative;
+  zoom: 1;
+}
+.flexslider .slides {
+  zoom: 1;
+}
+.flexslider .slides img {
+  height: auto;
+  -moz-user-select: none;
+}
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.loading .flex-viewport {
+  max-height: 300px;
+}
+.carousel li {
+  margin-right: 5px;
+}
+.flex-direction-nav {
+  *height: 0;
+}
+.flex-direction-nav a {
+  text-decoration: none;
+  display: block;
+  font-size: 0;
+  margin: -20px 0 0;
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+  overflow: hidden;
+  opacity: .4;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.flex-direction-nav a:before {
+  font-size: 40px;
+  display: inline-block;
+  background: transparent url(../../../../../images/left.png) no-repeat left top;
+  background-size: 40px auto;
+  width: 40px;
+  height: 70px;
+  content: '';
+}
+.flex-direction-nav a.flex-next:before {
+  background: transparent url(../../../../../images/right.png) no-repeat left top;
+  background-size: 40px auto;
+}
+.flex-direction-nav .flex-prev {
+  left: 20px;
+}
+.flex-direction-nav .flex-next {
+  right: 20px;
+  text-align: right;
+}
+.flexslider:hover .flex-direction-nav .flex-prev {
+  opacity: 0.7;
+  left: 10px;
+}
+.flexslider:hover .flex-direction-nav .flex-prev:hover {
+  opacity: 1;
+}
+.flexslider:hover .flex-direction-nav .flex-next {
+  opacity: 0.7;
+  right: 10px;
+}
+.flexslider:hover .flex-direction-nav .flex-next:hover {
+  opacity: 1;
+}
+.flex-direction-nav .flex-disabled {
+  opacity: 0!important;
+  filter: alpha(opacity=0);
+  cursor: default;
+  z-index: -1;
+}
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+.flex-pauseplay a:before {
+  font-family: "flexslider-icon";
+  font-size: 20px;
+  display: inline-block;
+  content: '\f004';
+}
+.flex-pauseplay a:hover {
+  opacity: 1;
+}
+.flex-pauseplay a.flex-play:before {
+  content: '\f003';
+}
+.flex-control-nav {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+.flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #caccce;
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.flex-control-paging li a:hover {
+  background: #00539c;
+  background: rgba(0, 0, 0, 0.7);
+}
+.flex-control-paging li a.flex-active {
+  background: #00539c;
+  cursor: default;
+}
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+}
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+.flex-control-thumbs img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: .7;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.flex-control-thumbs img:hover {
+  opacity: 1;
+}
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default;
+}
+/* ====================================================================================================================
+ * RESPONSIVE
+ * ====================================================================================================================*/
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1172px){
+   .flexslider .slides > li div.slide-copy h2 {
+		font-size: 20px !important;
+		line-height: 30px !important;
+		color: #fff;
+		padding-bottom: 5px;
+		text-transform: uppercase;
+	}
+	
+	.flexslider .slides > li div.slide-copy p {
+		font-size: 14px;
+		line-height: 22px;
+		color: #fff;
+	}
+	
+	.flex-direction-nav a:before {
+		font-size: 20px;
+		background-size: 20px auto;
+		width: 20px;
+		height: 35px;
+		content: '';
+	}
+	
+	.flex-direction-nav a.flex-next:before {
+		background-size: 20px auto;
+	}
+	
+	.content-block p.body {
+		padding:  0 20px 70px;
+	}
+}
+
+
+
+
+@media (max-width: 600px) {
+	
+	.flexslider .slides > li {
+		height: 475px;
+	}
+	
+	.flexslider .slides.square > li {
+		/*height: auto;*/
+	}
+
+	
+	.flexslider .slides img {
+		position: absolute;
+		margin: auto;
+		height: 100%;
+		width: auto;
+		left: -100%;
+		right: -100%;
+		top: -100%;
+		bottom: -100%;
+	}
+	
+	.flex-direction-nav a {
+		top: 40%;
+	}
+	
+	
+	.flexslider .slides > li div.slide-copy {
+	  position: absolute;
+	  top: auto;
+	  left: 0;
+	  right:0;
+	  bottom: 40px;
+	  width: 100%;
+	  padding: 20px 0;
+	  max-width: none;
+	}
+	
+	
+	.flexslider .slides > li div.slide-copy h2{
+		font-size: 24px !important;
+		line-height: 28px !important;
+		color: #fff;
+		padding-bottom: 5px;
+		text-align: center;
+		padding: 0 20px;
+	}
+	
+	.flexslider .slides > li div.slide-copy p{
+		font-size: 18px;
+		line-height: 24px;
+		text-align: center;
+		padding: 0 20px!important;
+	}
+	
+	.flexslider .slides > li a {
+	    position: static;
+	}
+	
+	.flex-direction-nav a:before, .flex-direction-nav a.flex-next:before  {
+		background-size: 20px auto;
+		width: 20px;
+		height: 35px;
+	}
+	
+	
+}
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_PEOPLE_FORM_LBL_PERSON_CREATED_BY" description="COM_PEOPLE_FORM_DESC_PERSON_CREATED_BY" hidden="true" hint="COM_PEOPLE_FORM_LBL_PERSON_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_PEOPLE_FORM_LBL_PERSON_MODIFIED_BY" description="COM_PEOPLE_FORM_DESC_PERSON_MODIFIED_BY" hidden="true" hint="COM_PEOPLE_FORM_LBL_PERSON_MODIFIED_BY"/>
+    <field name="name" filter="safehtml" type="text" required="true" label="COM_PEOPLE_FORM_LBL_PERSON_NAME" description="COM_PEOPLE_FORM_DESC_PERSON_NAME" hint="COM_PEOPLE_FORM_LBL_PERSON_NAME"/>
+    <field name="job" filter="safehtml" type="text" label="COM_PEOPLE_FORM_LBL_PERSON_JOB" description="COM_PEOPLE_FORM_DESC_PERSON_JOB" hint="COM_PEOPLE_FORM_LBL_PERSON_JOB"/>
+    <field name="company" filter="safehtml" type="text" label="COM_PEOPLE_FORM_LBL_PERSON_COMPANY" description="COM_PEOPLE_FORM_DESC_PERSON_COMPANY" hint="COM_PEOPLE_FORM_LBL_PERSON_COMPANY"/>
+    <field name="since" filter="safehtml" type="text" label="COM_PEOPLE_FORM_LBL_PERSON_SINCE" description="COM_PEOPLE_FORM_DESC_PERSON_SINCE" hint="COM_PEOPLE_FORM_LBL_PERSON_SINCE"/>
+    <field name="specialty" filter="safehtml" type="text" label="COM_PEOPLE_FORM_LBL_PERSON_SPECIALTY" description="COM_PEOPLE_FORM_DESC_PERSON_SPECIALTY" hint="COM_PEOPLE_FORM_LBL_PERSON_SPECIALTY"/>
+    <field name="about" editor="|" filter="JComponentHelper::filterText" type="editor" label="COM_PEOPLE_FORM_LBL_PERSON_ABOUT" description="COM_PEOPLE_FORM_DESC_PERSON_ABOUT" hint="COM_PEOPLE_FORM_LBL_PERSON_ABOUT"/>
+    <field name="image" directory="people" type="media" label="COM_PEOPLE_FORM_LBL_PERSON_IMAGE" description="COM_PEOPLE_FORM_DESC_PERSON_IMAGE" hint="COM_PEOPLE_FORM_LBL_PERSON_IMAGE"/>
+    <field name="mobile" directory="" type="media" label="COM_PEOPLE_FORM_LBL_PERSON_MOBILE" description="COM_PEOPLE_FORM_DESC_PERSON_MOBILE" hint="COM_PEOPLE_FORM_LBL_PERSON_MOBILE"/>
+    <field name="hero" directory="" type="media" label="COM_PEOPLE_FORM_LBL_PERSON_HERO" description="COM_PEOPLE_FORM_DESC_PERSON_HERO" hint="COM_PEOPLE_FORM_LBL_PERSON_HERO"/>
+    <field name="page_title" filter="safehtml" type="text" label="COM_PEOPLE_FORM_LBL_PERSON_PAGE_TITLE" description="COM_PEOPLE_FORM_DESC_PERSON_PAGE_TITLE" hint="COM_PEOPLE_FORM_LBL_PERSON_PAGE_TITLE"/>
+    <field name="meta_desc" filter="safehtml" type="textarea" label="COM_PEOPLE_FORM_LBL_PERSON_META_DESC" description="COM_PEOPLE_FORM_DESC_PERSON_META_DESC" hint="COM_PEOPLE_FORM_LBL_PERSON_META_DESC"/>
+    <field name="alias" type="text" class="inputbox" generator="name" label="COM_PEOPLE_FORM_LBL_PERSON_ALIAS" description="COM_PEOPLE_FORM_DESC_PERSON_ALIAS" hint="COM_PEOPLE_FORM_LBL_PERSON_ALIAS"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

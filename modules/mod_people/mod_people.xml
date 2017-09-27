@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>People module</name>
+    <author>Simon Cruise</author>
+    <version>1.0.0</version>
+    <description>For displaying people</description>
+    <files>
+        <filename>mod_people.xml</filename>
+        <filename module="mod_people">mod_people.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+        
+        <fields name="params">
+            
+            <fieldset name="basic">
+                
+                <field
+                    name="title"
+                    type="text"
+                    description="Title"
+                    extension="com_jobs"
+                    label="Title"></field>
+                
+				<field
+                    name="text"
+                    type="textarea"
+                    description="Text"
+                    extension="com_jobs"
+                    label="Text"></field>
+                
+				<field
+                    name="hero"
+                    type="media"
+                    description="Hero image"
+                    extension="com_jobs"
+                    label="Hero"></field>
+					
+					
+					
+				<field name="cta"
+					type="radio"
+					label="CTA button"
+					class="btn-group btn-group-yesno"
+					description="Show career page cta button"
+					default="0"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+            </fieldset>
+            
+           
+            
+        </fields>
+        
+    </config>
+</extension>

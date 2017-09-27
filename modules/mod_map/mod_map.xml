@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>Map module</name>
+    <author>Simon Cruise</author>
+    <creationDate>2017-07-21</creationDate>
+    <copyright>Copyright (C) 2017 bbandp.com</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>simon.cruise@bbandp.com</authorEmail>
+    <authorUrl>http://bbandp.com</authorUrl>
+    <version>1.0</version>
+    <description>MOD_GALLERY_INSTALL_DESC</description>
+    
+    <scriptfile>install.php</scriptfile>    
+    
+    <files>
+        <filename module="mod_map">mod_map.php</filename>
+        <folder>tmpl</folder>
+        <filename>index.html</filename>
+        <filename>mod_map.xml</filename>
+        <filename>install.php</filename>
+    </files>
+    
+   
+    <config>
+        
+        <fields name="params">
+			<field name="lat" type="text" filter="safehtml" required="true" label="Lat" description="Lat" hint="Lat"/>
+			<field name="long" type="text" filter="safehtml" required="true" label="Long" description="Long" hint="Long"/>
+
+    </config>
+    
+</extension>

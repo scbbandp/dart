@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade">
+
+	<name>Sitemap</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>August 2017</creationDate>
+	<author>Simon Cruise</author>
+	<authorEmail>simon.cruise@bbandp.com</authorEmail>
+	<authorUrl>http://bbandp.com</authorUrl>
+	<!--  The version string is recorded in the components table -->
+	<version>0.0.5</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Description of the site map component ...</description>
+
+`<!--
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	-->
+
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+		to copy FROM in the package to install therefore files copied
+		in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>sitemap.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+	</files>
+
+
+	<administration>
+		<!--<files folder="admin">
+			<filename>index.html</filename>
+			<filename>sitemap.php</filename>
+			<folder>sql</folder>
+		</files>-->
+	</administration>
+
+</extension>

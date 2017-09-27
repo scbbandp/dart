@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>Info module</name>
+    <author>Simon Cruise</author>
+    <creationDate>2017-07-10</creationDate>
+    <copyright>Copyright (C) 2017 bbandp.com</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>simon.cruise"bbandp.com</authorEmail>
+    <authorUrl>http://bbandp.com</authorUrl>
+    <version>1.0</version>
+    <description>Module to display Dart stats and figures</description>
+    
+    <files>
+        <filename module="mod_info">mod_info.php</filename>
+        <folder>tmpl</folder>
+        <filename>index.html</filename>
+        <filename>mod_info.xml</filename>
+        <filename>helper.php</filename>
+    </files>
+    
+    
+    <config>
+        
+        <fields name="params">
+            
+            <fieldset name="basic">
+                
+                <field
+                    name="first"
+                    type="text"
+                    description="First"
+                    extension="com_info"
+                    label="First" />
+				<field
+                    name="second"
+                    type="text"
+                    description="Second"
+                    extension="com_info"
+                    label="Second" />
+				<field
+                    name="third"
+                    type="text"
+                    description="Third"
+                    extension="com_info"
+                    label="Third" />
+            </fieldset>
+        </fields>
+        
+    </config>
+</extension>
